@@ -26,6 +26,6 @@ public class Formulario extends HttpServlet {
 		}
 		
 		PrintWriter escrever = resp.getWriter();
-		
+		escrever.print("Olá " + nome + "! Muito obrigado.");
 	}
 }
