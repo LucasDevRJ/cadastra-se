@@ -9,20 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.github.lucasdevrj.cadastrase.cliente.Cliente;
+
 @WebServlet("/Formulario")
 public class Formulario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	Cliente cliente = new Cliente();
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String nome = req.getParameter("nome");
-		String sobrenome = req.getParameter("sobrenome");
-		String email = req.getParameter("email");
+		cliente.setNome(req.getParameter("nome"));
+		cliente.setSobrenome(req.getParameter("sobrenome"));
+		cliente.setSobrenome(req.getParameter("email"));
 		
-		if (nome.isEmpty() || sobrenome.isEmpty() || email.isEmpty()) {
+		if (cliente.getNome().isEmpty() || cliente.getSobrenome().isEmpty() || cliente.getEmail().isEmpty()) {
 			throw new NullPointerException("Dados pessoais não informados!");
 		} else {
-			System.out.println("Cliente " + nome + " " + sobrenome + " está cadastrado com sucesso!");
+			System.out.println("Cliente " + cliente.getNome() + " " + cliente.getSobrenome() + " está cadastrado com sucesso!");
 		}
 		
 		PrintWriter escrever = resp.getWriter();
