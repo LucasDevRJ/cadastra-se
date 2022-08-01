@@ -1,6 +1,7 @@
 package br.com.github.lucasdevrj.cadastrase.formulario;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +15,9 @@ public class Formulario extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		String nome = req.getParameter("nome");
+		String sobrenome = req.getParameter("sobrenome");
+		PrintWriter escrever = resp.getWriter();
+		System.out.println("Cliente ");
 	}
-
 }
