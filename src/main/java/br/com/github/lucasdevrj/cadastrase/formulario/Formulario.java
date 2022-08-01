@@ -17,7 +17,8 @@ public class Formulario extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String nome = req.getParameter("nome");
 		String sobrenome = req.getParameter("sobrenome");
+		String email = req.getParameter("email");
 		PrintWriter escrever = resp.getWriter();
-		System.out.println("Cliente ");
+		System.out.println("Cliente " + nome + " " + sobrenome + " está cadastrado com sucesso!");
 	}
 }
