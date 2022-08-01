@@ -21,9 +21,11 @@ public class Formulario extends HttpServlet {
 		
 		if (nome.isEmpty() || sobrenome.isEmpty() || email.isEmpty()) {
 			throw new NullPointerException("Dados pessoais não informados!");
+		} else {
+			System.out.println("Cliente " + nome + " " + sobrenome + " está cadastrado com sucesso!");
 		}
 		
 		PrintWriter escrever = resp.getWriter();
-		System.out.println("Cliente " + nome + " " + sobrenome + " está cadastrado com sucesso!");
+		
 	}
 }
