@@ -3,7 +3,11 @@
 .cabecalho {
 	height: 200px;
 	background-color: black;
-	color: 
+	color: white;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	font-size: 60px;
 }
 
 .formulario {
