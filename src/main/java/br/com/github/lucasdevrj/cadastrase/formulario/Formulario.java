@@ -18,6 +18,11 @@ public class Formulario extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String sobrenome = req.getParameter("sobrenome");
 		String email = req.getParameter("email");
+		
+		if (nome.isEmpty() || sobrenome.isEmpty() || email.isEmpty()) {
+			throw new NullPointerException("Dados pessoais não informados!");
+		}
+		
 		PrintWriter escrever = resp.getWriter();
 		System.out.println("Cliente " + nome + " " + sobrenome + " está cadastrado com sucesso!");
 	}
