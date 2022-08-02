@@ -30,3 +30,14 @@
 	border-style: solid;
 	border-color: gray;
 }
+
+.formulario-botao {
+	padding: 20px 30px;
+	width: 30%;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	border-width: 1px;
+	margin: 30px 0;
+	cursor: pointer;
+}
