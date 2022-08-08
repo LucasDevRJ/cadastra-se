@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.github.lucasdevrj.cadastrase.cliente.Cliente;
 import br.com.github.lucasdevrj.cadastrase.validacao.Validacao;
 
-@WebServlet("/formulario")
-public class Formulario extends HttpServlet {
+@WebServlet("/formularioDoPost")
+public class FormularioDoPost extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	Cliente cliente = new Cliente();
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		cliente.setNome(req.getParameter("nome"));
 		cliente.setSobrenome(req.getParameter("sobrenome"));
 		cliente.setEmail(req.getParameter("email"));
