@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.github.lucasdevrj.cadastrase.cadastro.Cadastro;
 import br.com.github.lucasdevrj.cadastrase.cliente.Cliente;
 import br.com.github.lucasdevrj.cadastrase.validacao.Validacao;
 
@@ -26,6 +27,9 @@ public class FormularioDoPost extends HttpServlet {
 		
 		Validacao valida = new Validacao();
 		valida.validaDados(cliente);
+		
+		Cadastro cadastro = new Cadastro();
+		cadastro.adicionaCadastro(cliente);
 		
 		PrintWriter escrever = resp.getWriter();
 		escrever.print("Olá " + cliente.getNome() + "! Muito obrigado.");

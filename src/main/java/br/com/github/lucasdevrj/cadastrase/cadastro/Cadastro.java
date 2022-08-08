@@ -9,7 +9,7 @@ public class Cadastro {
 
 	private static List<Cliente> clientes = new ArrayList<Cliente>();
 	
-	public Cadastro(Cliente cliente) {
+	public void adicionaCadastro(Cliente cliente) {
 		Cadastro.clientes.add(cliente);
 	}
 	
