@@ -32,6 +32,10 @@ public class FormularioDoPost extends HttpServlet {
 		cadastro.adicionaCadastro(cliente);
 		
 		PrintWriter escrever = resp.getWriter();
-		escrever.print("Olá " + cliente.getNome() + "! Muito obrigado.");
+		escrever.println("<html>");
+		escrever.println("<body>");
+		escrever.print("<h2>Olá " + cliente.getNome() + "! Muito obrigado.</h2>");
+		escrever.println("</body>");
+		escrever.println("</html>");
 	}
 }
