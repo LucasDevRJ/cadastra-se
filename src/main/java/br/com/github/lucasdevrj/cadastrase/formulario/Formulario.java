@@ -13,14 +13,13 @@ import br.com.github.lucasdevrj.cadastrase.cadastro.Cadastro;
 import br.com.github.lucasdevrj.cadastrase.cliente.Cliente;
 import br.com.github.lucasdevrj.cadastrase.validacao.Validacao;
 
-@WebServlet("/formularioDoPost")
-public class FormularioDoPost extends HttpServlet {
+@WebServlet("/formulario")
+public class Formulario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	Cliente cliente = new Cliente();
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Cliente cliente = new Cliente();
 		cliente.setNome(req.getParameter("nome"));
 		cliente.setSobrenome(req.getParameter("sobrenome"));
 		cliente.setEmail(req.getParameter("email"));

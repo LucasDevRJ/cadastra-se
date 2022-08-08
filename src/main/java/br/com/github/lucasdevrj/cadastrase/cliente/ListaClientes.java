@@ -1,4 +1,4 @@
-package br.com.github.lucasdevrj.cadastrase.formulario;
+package br.com.github.lucasdevrj.cadastrase.cliente;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.github.lucasdevrj.cadastrase.cadastro.Cadastro;
 
 @WebServlet("/clientes-cadastrados")
-public class FormularioDoGet extends HttpServlet {
+public class ListaClientes extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,6 +33,11 @@ public class FormularioDoGet extends HttpServlet {
 			escreve.println("<p>Nome: " + nome + "</p>");
 			escreve.println("<p>Sobrenome: " + sobrenome + "</p>");
 			escreve.println("<p>E-mail: " + email + "</p>");
+			escreve.println("</li>");
 		}
+		
+		escreve.println("</ul>");
+		escreve.println("</body>");
+		escreve.println("</html>");
 	}
 }
