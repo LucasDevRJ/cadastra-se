@@ -7,5 +7,13 @@ import br.com.github.lucasdevrj.cadastrase.cliente.Cliente;
 
 public class Cadastro {
 
-	private List<Cliente> clientes = new ArrayList<Cliente>();
+	private static List<Cliente> clientes = new ArrayList<Cliente>();
+	
+	public Cadastro(Cliente cliente) {
+		Cadastro.clientes.add(cliente);
+	}
+	
+	public List<Cliente> getClientes() {
+		return clientes;
+	}
 }
