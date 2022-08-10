@@ -3,6 +3,7 @@ package br.com.github.lucasdevrj.cadastrase.formulario;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +31,10 @@ public class Formulario extends HttpServlet {
 		Cadastro cadastro = new Cadastro();
 		cadastro.adicionaCadastro(cliente);
 		
-		
+		RequestDispatcher requisicao = req.getRequestDispatcher("/clienteCadastrado.jsp");
+		req.setAttribute("nome", cliente.getNome());
+		req.setAttribute("sobrenome", cliente.getSobrenome());
+		req.setAttribute("email", cliente.getEmail());
+		requisicao.forward(req, resp);
 	}
 }
