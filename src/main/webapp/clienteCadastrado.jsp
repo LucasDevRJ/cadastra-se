@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 
 <%
-	String nome = (String) request.getAttribute("name");
+	String nome = (String) request.getAttribute("nome");
 	String sobrenome = (String) request.getAttribute("sobrenome");
 	String email = (String) request.getAttribute("email");
 %>
@@ -11,7 +11,6 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Insert title here</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	
 	<body>
