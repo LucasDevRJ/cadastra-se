@@ -30,11 +30,6 @@ public class Formulario extends HttpServlet {
 		Cadastro cadastro = new Cadastro();
 		cadastro.adicionaCadastro(cliente);
 		
-		PrintWriter escrever = resp.getWriter();
-		escrever.println("<html>");
-		escrever.println("<body>");
-		escrever.print("<h2>Olá " + cliente.getNome() + "! Muito obrigado.</h2>");
-		escrever.println("</body>");
-		escrever.println("</html>");
+		
 	}
 }
