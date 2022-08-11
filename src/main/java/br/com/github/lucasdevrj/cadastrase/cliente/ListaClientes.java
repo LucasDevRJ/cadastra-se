@@ -1,9 +1,9 @@
 package br.com.github.lucasdevrj.cadastrase.cliente;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,6 +19,9 @@ public class ListaClientes extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Cadastro cadastro = new Cadastro();
 		List<Cliente> lista = cadastro.getClientes();
+		request.setAttribute("clientes", lista);
 		
+		RequestDispatcher requisicao = request.getRequestDispatcher("/listaClientes.jsp");
+		requisicao.forward(request, response);
 	}
 }
