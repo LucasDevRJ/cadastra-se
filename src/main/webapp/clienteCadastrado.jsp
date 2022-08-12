@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
-<%
-	String nome = (String) request.getAttribute("nome");
-%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,7 +8,7 @@
 	</head>
 	
 	<body>
-		<h2>Olá <%=nome %>!!</h2>
+		<h2>Olá ${nome}!!</h2>
 		<h3>Obrigado pela confiança!!!</h3>
 		<p><a href="index.html">Voltar</a></p>
 	</body>
