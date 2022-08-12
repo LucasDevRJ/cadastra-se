@@ -12,7 +12,13 @@
 		<ul>
 			<%
 				List<Cliente> lista = (List<Cliente>) request.getAttribute("clientes");
-				
+				for (Cliente cliente : lista) {
+			%>
+				<li> 
+					<%=cliente.getNome() %>
+				</li>
+			<%
+				}
 			%>
 		</ul>
 	</body>
