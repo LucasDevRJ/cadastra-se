@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, br.com.github.lucasdevrj.cadastrase.cliente.Cliente" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:url value="/index.jsp" var="paginaPrincipal"/>
 
 <!DOCTYPE html>
 <html>
@@ -29,6 +30,10 @@
 					</li>
 				</c:forEach>
 			</ul>
+			
+			<p class="link">
+				<a href="${paginaPrincipal}">Voltar</a>
+			</p>
 		</main>
 		
 		<footer class="rodape">

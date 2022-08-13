@@ -20,3 +20,14 @@
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+.link {
+	font-size: 30px;
+	margin: 40px;
+}
+
+.link a {
+	text-decoration: underline;
+	color: gray;
+	
+}
