@@ -13,12 +13,13 @@
 
 .lista-cliente {
 	width: 60%;
+	cursor: pointer;
+}
+
+.cliente-informacoes {
 	font-size: 30px;
 	padding: 15px 18px;
 	margin: 20px 0;
-	border: 2px solid black;
-	border-radius: 5px;
-	cursor: pointer;
 }
 
 .link {

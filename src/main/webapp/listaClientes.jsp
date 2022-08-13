@@ -23,11 +23,12 @@
 			<h2 class="titulo">Lista de Cadastros</h2>
 			<ul class="lista-cliente">
 				<c:forEach items="${clientes}" var="cliente">
-					<li>
+					<li class="cliente-informacoes">
 						<p>Nome: ${cliente.nome}</p>
 						<p>Sobrenome: ${cliente.sobrenome}</p>
 						<p>E-mail: ${cliente.email}</p>
 					</li>
+					<hr>
 				</c:forEach>
 			</ul>
 			
