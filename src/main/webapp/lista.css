@@ -1,5 +1,10 @@
 @charset "ISO-8859-1";
 
+.titulo {
+	font-size: 50px;
+	margin: 30px 0;
+}
+
 .lista {
 	display: flex;
 	flex-direction: column;

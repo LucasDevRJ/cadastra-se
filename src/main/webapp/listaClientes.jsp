@@ -19,7 +19,7 @@
 		</header>
 		
 		<main class="lista">
-			<h2>Lista de Cadastros</h2>
+			<h2 class="titulo">Lista de Cadastros</h2>
 			<ul class="lista-cliente">
 				<c:forEach items="${clientes}" var="cliente">
 					<li>
