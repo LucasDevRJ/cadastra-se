@@ -13,6 +13,10 @@
 	</head>
 	
 	<body>
+		<header class="cabecalho">
+			<h1>Cadastra-se</h1>
+		</header>
+	
 		<h2>Olá ${nome}!!</h2>
 		<h3>Obrigado pela confiança!!!</h3>
 		<p><a href="${paginaPrincipal}">Voltar</a></p>
