@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/index.jps" var="paginaPrincipal"/>
+<c:url value="/index.jsp" var="paginaPrincipal"/>
 <c:url value="/clientes-cadastrados" var="lista"/>
 
 <!DOCTYPE html>
@@ -20,10 +20,18 @@
 		</header>
 	
 		<main class="principal">
-			<h2 class="titulo">Olá ${nome}!!</h2>
-			<h3 class="subtitulo">Obrigado pela confiança!!!</h3>
-			<p class="link"><a href="${paginaPrincipal}">Voltar</a></p>
-			<p class="link"><a href="${lista}">Lista</a></p>
+			<c:if test="${not empty nome && not empty sobrenome}">
+				<h2 class="titulo">Olá ${nome}!!</h2>
+				<h3 class="subtitulo">Obrigado pela confiança!!!</h3>
+				<p class="link"><a href="${paginaPrincipal}">Voltar</a></p>
+				<p class="link"><a href="${lista}">Lista</a></p>
+			</c:if>
+			
+			<c:if test="${empty nome || empty sobrenome}">
+				<h2 class="titulo">Preencha os campos!!!</h2>
+				<p class="link"><a href="${paginaPrincipal}">Voltar</a></p>
+				<p class="link"><a href="${lista}">Lista</a></p>
+			</c:if>
 		</main>
 		
 		<footer class="rodape">

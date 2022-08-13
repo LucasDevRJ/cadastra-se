@@ -1,3 +1,4 @@
+<%@page import="javax.swing.plaf.metal.MetalBorders.Flush3DBorder"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, br.com.github.lucasdevrj.cadastrase.cliente.Cliente" %>
@@ -22,14 +23,20 @@
 		<main class="lista">
 			<h2 class="titulo">Lista de Cadastros</h2>
 			<ul class="lista-cliente">
-				<c:forEach items="${clientes}" var="cliente">
+				<c:if test="${not empty clientes}">
+					<c:forEach items="${clientes}" var="cliente">
 					<li class="cliente-informacoes">
 						<p>Nome: ${cliente.nome}</p>
 						<p>Sobrenome: ${cliente.sobrenome}</p>
 						<p>E-mail: ${cliente.email}</p>
 					</li>
 					<hr>
-				</c:forEach>
+					</c:forEach>
+				</c:if>
+				
+				<c:if test="${empty clientes}">
+					<h3 class="lista-mensagem">Lista está vázia!!</h3>
+				</c:if>
 			</ul>
 			
 			<p class="link">
