@@ -10,6 +10,7 @@
 		<title>Insert title here</title>
 		<link rel="stylesheet" type="text/css" href="reset.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="cadastrado.css">
 	</head>
 	
 	<body>
@@ -17,8 +18,16 @@
 			<h1>Cadastra-se</h1>
 		</header>
 	
-		<h2>Olá ${nome}!!</h2>
-		<h3>Obrigado pela confiança!!!</h3>
-		<p><a href="${paginaPrincipal}">Voltar</a></p>
+		<main class="principal">
+			<h2 class="titulo">Olá ${nome}!!</h2>
+			<h3 class="subtitulo">Obrigado pela confiança!!!</h3>
+			<p><a href="${paginaPrincipal}">Voltar</a></p>
+		</main>
+		
+		<footer class="rodape">
+			<a href="https://github.com/LucasDevRJ" target="blank">
+				<img alt="Logo do GitHub" src="imagens/github-logo.png">
+			</a>
+		</footer>
 	</body>
 </html>

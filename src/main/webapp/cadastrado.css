@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+
+.principal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 250px 0;
+}
