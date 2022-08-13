@@ -21,7 +21,7 @@
 		<main class="principal">
 			<h2 class="titulo">Olá ${nome}!!</h2>
 			<h3 class="subtitulo">Obrigado pela confiança!!!</h3>
-			<p><a href="${paginaPrincipal}">Voltar</a></p>
+			<p class="link"><a href="${paginaPrincipal}">Voltar</a></p>
 		</main>
 		
 		<footer class="rodape">
