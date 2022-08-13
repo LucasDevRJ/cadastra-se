@@ -8,18 +8,33 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Lista de Cadastros</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="lista.css">
 	</head>
 	
 	<body>
-		<h2>Lista de Cadastros</h2>
-		<ul>
-			<c:forEach items="${clientes}" var="cliente">
-				<li>
-					<p>Nome: ${cliente.nome}</p>
-					<p>Sobrenome: ${cliente.sobrenome}</p>
-					<p>E-mail: ${cliente.email}</p>
-				</li>
-			</c:forEach>
-		</ul>
+		<header class="cabecalho">
+			<h1>Cadastra-se</h1>
+		</header>
+		
+		<main class="lista">
+			<h2>Lista de Cadastros</h2>
+			<ul class="lista-cliente">
+				<c:forEach items="${clientes}" var="cliente">
+					<li>
+						<p>Nome: ${cliente.nome}</p>
+						<p>Sobrenome: ${cliente.sobrenome}</p>
+						<p>E-mail: ${cliente.email}</p>
+					</li>
+				</c:forEach>
+			</ul>
+		</main>
+		
+		<footer class="rodape">
+			<a href="https://github.com/LucasDevRJ" target="blank">
+				<img alt="Logo do GitHub" src="imagens/github-logo.png">
+			</a>
+		</footer>
 	</body>
 </html>
