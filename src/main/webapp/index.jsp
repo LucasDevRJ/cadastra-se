@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/formulario" var="clienteCadastrado"/>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -13,7 +16,7 @@
 			<h1>Cadastra-se</h1>
 		</header>
 	
-		<form class="formulario" action="/cadastra-se/formulario" method="post">
+		<form class="formulario" action="${clienteCadastrado}" method="post">
 			
 			<label for="nome" class="formulario-texto">Nome:</label>
 			<input type="text" name="nome" class="entrada">
