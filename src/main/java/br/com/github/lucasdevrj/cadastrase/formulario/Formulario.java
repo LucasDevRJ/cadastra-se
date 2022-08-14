@@ -26,13 +26,16 @@ public class Formulario extends HttpServlet {
 		Validacao valida = new Validacao();
 		valida.validaDados(cliente);
 		
-		Cadastro cadastro = new Cadastro();
-		cadastro.adicionaCadastro(cliente);
-		
-		RequestDispatcher requisicao = req.getRequestDispatcher("/clienteCadastrado.jsp");
 		req.setAttribute("nome", cliente.getNome());
 		req.setAttribute("sobrenome", cliente.getSobrenome());
 		req.setAttribute("email", cliente.getEmail());
-		requisicao.forward(req, resp);
+		
+		Cadastro cadastro = new Cadastro();
+		cadastro.adicionaCadastro(cliente);
+		
+		resp.sendRedirect("clienteCadastrado.jsp");
+		
+//		RequestDispatcher requisicao = req.getRequestDispatcher("/clienteCadastrado.jsp");
+//		requisicao.forward(req, resp);
 	}
 }
