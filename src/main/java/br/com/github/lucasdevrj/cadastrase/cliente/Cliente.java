@@ -2,6 +2,7 @@ package br.com.github.lucasdevrj.cadastrase.cliente;
 
 public class Cliente {
 
+	private static Integer identificador;
 	private String nome;
 	private String sobrenome;
 	private String email;
@@ -28,5 +29,13 @@ public class Cliente {
 	
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public static void setIdentificador(Integer identificador) {
+		Cliente.identificador = identificador;
+	}
+	
+	public static Integer getIdentificador() {
+		return identificador;
 	}
 }
