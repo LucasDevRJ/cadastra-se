@@ -29,7 +29,7 @@
 						<p>Nome: ${cliente.nome}</p>
 						<p>Sobrenome: ${cliente.sobrenome}</p>
 						<p>E-mail: ${cliente.email}</p>
-						<a href="/cadastra-se/removeCliente">&#10060;</a>
+						<a href="/cadastra-se/removeCliente?identificador=${cliente.identificador}">&#10060;</a>
 					</li>
 					<hr>
 					</c:forEach>

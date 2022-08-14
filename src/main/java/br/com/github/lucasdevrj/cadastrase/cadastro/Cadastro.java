@@ -1,25 +1,39 @@
 package br.com.github.lucasdevrj.cadastrase.cadastro;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import br.com.github.lucasdevrj.cadastrase.cliente.Cliente;
 
 public class Cadastro {
 
-	private Integer identificador;
+	private static Integer chaveSequencial = 1;
 	private static List<Cliente> clientes = new ArrayList<>();
 	
-	public Integer getIdentificador() {
-		return identificador;
+	public static Integer getChaveSequencial() {
+		return chaveSequencial;
 	}
 	
-	public void setIdentificador(Integer identificador) {
-		this.identificador = identificador;
+	public static void setChaveSequencial(Integer chaveSequencial) {
+		Cadastro.chaveSequencial = chaveSequencial;
 	}
 	
 	public void adicionaCadastro(Cliente cliente) {
+		cliente.setIdentificador(Cadastro.chaveSequencial++);
 		Cadastro.clientes.add(cliente);
+	}
+	
+	public void removeCadastro(Integer id) {
+		Iterator<Cliente> it = clientes.iterator();
+		
+		while (it.hasNext()) {
+			Cliente cl = it.next();
+			
+			if (cl.getIdentificador() == id) {
+				it.remove();
+			}
+		}
 	}
 	
 	public List<Cliente> getClientes() {
