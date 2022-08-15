@@ -1,6 +1,8 @@
 package br.com.github.lucasdevrj.cadastrase.cliente;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +20,11 @@ public class ExibeCliente extends HttpServlet {
 		Integer idt = Integer.valueOf(identificador);
 		
 		Cadastro cadastro = new Cadastro();
-		Cliente cliente = cadastro.pesquisaCliente();
+		Cliente cliente = cadastro.pesquisaCliente(idt);
+		
+		System.out.println(cliente.getNome());
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/alteraCliente.jsp");
+		rd.forward(request, response);
 	}
 }

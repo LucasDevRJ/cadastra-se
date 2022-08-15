@@ -43,7 +43,7 @@ public class Cadastro {
 	public Cliente pesquisaCliente(Integer id) {
 		for (Cliente cliente : clientes) {
 			if (cliente.getIdentificador() == id) {
-				
+				return cliente;
 			}
 		}
 		return null;
