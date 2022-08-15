@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.github.lucasdevrj.cadastrase.cadastro.Cadastro;
+
 @WebServlet("/exibeCliente")
 public class ExibeCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -14,5 +16,8 @@ public class ExibeCliente extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String identificador = request.getParameter("identificador");
 		Integer idt = Integer.valueOf(identificador);
+		
+		Cadastro cadastro = new Cadastro();
+		Cliente cliente = cadastro.pesquisaCliente();
 	}
 }

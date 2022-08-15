@@ -39,4 +39,13 @@ public class Cadastro {
 	public List<Cliente> getClientes() {
 		return Cadastro.clientes;
 	}
+
+	public Cliente pesquisaCliente(Integer id) {
+		for (Cliente cliente : clientes) {
+			if (cliente.getIdentificador() == id) {
+				
+			}
+		}
+		return null;
+	}
 }
