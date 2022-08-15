@@ -21,8 +21,8 @@ public class ExibeCliente extends HttpServlet {
 		
 		Cadastro cadastro = new Cadastro();
 		Cliente cliente = cadastro.pesquisaCliente(idt);
-		
-		System.out.println(cliente.getNome());
+	
+		request.setAttribute("cliente", cliente);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/alteraCliente.jsp");
 		rd.forward(request, response);
