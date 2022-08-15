@@ -1,5 +1,5 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-<c:url value="/formulario" var="cadastrado"/>
+<c:url value="/alteraCliente" var="alterado"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,16 +16,16 @@
 			<h1>Cadastra-se</h1>
 		</header>
 	
-		<form class="formulario" action="${cadastrado}" method="post">
+		<form class="formulario" action="${alterado}" method="post">
 			
 			<label for="nome" class="formulario-texto">Nome:</label>
-			<input type="text" name="nome" class="entrada">
+			<input type="text" name="nome" class="entrada" value="${cliente.nome}">
 					
 			<label for="sobrenome" class="formulario-texto">Sobrenome:</label>
-			<input type="text" name="sobrenome" class="entrada">
+			<input type="text" name="sobrenome" class="entrada" value="${cliente.sobrenome}">
 					
 			<label for="email" class="formulario-texto">E-mail:</label>
-			<input type="email" name="email" class="entrada">
+			<input type="email" name="email" class="entrada" value="${cliente.email}">
 			
 			<input type="submit" value="Alterar" class="formulario-botao">
 		</form>
