@@ -27,6 +27,8 @@
 			<label for="email" class="formulario-texto">E-mail:</label>
 			<input type="email" name="email" class="entrada" value="${cliente.email}">
 			
+			<input type="hidden" name="identificador" class="entrada" value="${cliente.identificador}">
+			
 			<input type="submit" value="Alterar" class="formulario-botao">
 		</form>
 		
