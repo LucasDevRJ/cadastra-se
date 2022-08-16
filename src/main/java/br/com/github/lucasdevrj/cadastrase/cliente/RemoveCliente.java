@@ -23,6 +23,6 @@ public class RemoveCliente extends HttpServlet {
 		Cadastro cadastro = new Cadastro();
 		cadastro.removeCadastro(id);
 		
-		resp.sendRedirect("listaClientes.jsp");
+		resp.sendRedirect("ClienteRemovido.jsp");
 	}
 }

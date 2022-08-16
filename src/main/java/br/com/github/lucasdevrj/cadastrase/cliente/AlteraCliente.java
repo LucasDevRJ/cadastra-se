@@ -27,7 +27,7 @@ public class AlteraCliente extends HttpServlet {
 		cliente.setSobrenome(sobrenome);
 		cliente.setEmail(email);
 		
-		response.sendRedirect("listaClientes.jsp");
+		response.sendRedirect("ClienteAlterado.jsp");
 	}
 
 }
